@@ -8,7 +8,7 @@ import Products from '../../products/products';
 const mockStore = configureStore([]);
 
 describe('Products component', () => {
-    let store;
+    let store: any;
     beforeEach(() => {
         const initialState = {
             products: {
@@ -30,6 +30,5 @@ describe('Products component', () => {
             </Provider>
         );
         expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
-
     });
 });
